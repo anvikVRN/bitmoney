@@ -153,10 +153,10 @@ let COUNTER=COUNTER+IP6COUNT
   mkdir ~/.bitmoney_$ALIAS
   unzip Date.zip -d ~/.bitmoney_$ALIAS
   echo '#!/bin/bash' > ~/bin/bitmoneyd_$ALIAS.sh
-  echo "bitmoneyd -daemon -conf=$CONF_DIR/transcendence.conf -datadir=$CONF_DIR "'$*' >> ~/bin/transcendenced_$ALIAS.sh
+  echo "bitmoneyd -daemon -conf=$CONF_DIR/bitmoney.conf -datadir=$CONF_DIR "'$*' >> ~/bin/bitmoneyd_$ALIAS.sh
   echo '#!/bin/bash' > ~/bin/bitmoney-cli_$ALIAS.sh
   echo "bitmoney-cli -conf=$CONF_DIR/bitmoney.conf -datadir=$CONF_DIR "'$*' >> ~/bin/bitmoney-cli_$ALIAS.sh
-  echo '#!/bin/bash' > ~/bin/transcendence-tx_$ALIAS.sh
+  echo '#!/bin/bash' > ~/bin/bitmoney-tx_$ALIAS.sh
   echo "bitmoney-tx -conf=$CONF_DIR/bitmoney.conf -datadir=$CONF_DIR "'$*' >> ~/bin/bitmoney-tx_$ALIAS.sh
   chmod 755 ~/bin/bitmoney*.sh
   mkdir -p $CONF_DIR
